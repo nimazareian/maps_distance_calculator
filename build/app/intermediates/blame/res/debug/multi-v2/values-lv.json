@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Nima\\Flutter\\maps_distance_calculator\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
+            "outputFile": "C:\\Users\\Ariel\\Documents\\VCS\\maps_distance_calculator\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-lv\\values-lv.xml",
+                    "source": "C:\\Users\\Ariel\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
