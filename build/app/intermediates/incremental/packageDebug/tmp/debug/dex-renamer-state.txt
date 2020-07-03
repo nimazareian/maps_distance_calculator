@@ -1,4 +1,4 @@
-#Thu Jul 02 14:55:52 PDT 2020
-base.0=C\:\\Users\\Ariel\\Documents\\VCS\\maps_distance_calculator\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Fri Jul 03 14:15:34 PDT 2020
+base.0=D\:\\Nima\\Flutter\\maps_distance_calculator\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
