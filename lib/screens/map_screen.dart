@@ -17,21 +17,25 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   MapboxMapController mapController;
+  Line _selectedLine;
   CameraPosition _position = _kInitialPosition;
   LatLng userLocation;
   List<LatLng> lines = List<LatLng>();
   double totalDistance = 0;
+  int _circleCount = 0;
+  Circle _selectedCircle;
 
   @override
   void initState() {
     super.initState();
     updateUI(widget.userLocation);
-    print('test test ${userLocation.toString()}'); //todo test
+    // print('test test ${userLocation.toString()}'); //todo test
   }
 
   @override
   void dispose() {
     // mapController.removeListener(_onMapChanged);
+    mapController?.onLineTapped?.remove(_onLineTapped); ////////////////
     super.dispose();
   }
 
@@ -39,7 +43,7 @@ class _MapScreenState extends State<MapScreen> {
     if (startLocation != null) {
       userLocation = startLocation;
     }
-    print('user location is: $userLocation');
+    // print('user location is: $userLocation');
   }
 
   static final CameraPosition _kInitialPosition = const CameraPosition(
@@ -49,30 +53,111 @@ class _MapScreenState extends State<MapScreen> {
 
   void _onMapCreated(MapboxMapController controller) {
     mapController = controller;
+    controller.onLineTapped
+        .add(_onLineTapped); ////////////////////////////////////
+    mapController.onCircleTapped.add(_onCircleTapped);
   }
 
   void getCameraCoordinate() {
     setState(() {
       _position = mapController.cameraPosition; //doesn't update, stays at init
     });
-    print('FAB clicked, position: $_position');
+  }
+
+  void _removeCircle() {
+    mapController.removeCircle(_selectedCircle);
+    setState(() {
+      _selectedCircle = null;
+      _circleCount -= 1;
+    });
+  }
+
+  void _onCircleTapped(Circle circle) {
+    if (_selectedCircle != null) {
+      _updateSelectedCircle(
+        CircleOptions(
+          circleRadius: 4.5,
+          circleColor: "#ff3300",
+        ),
+      );
+    }
+    setState(() {
+      if (_selectedCircle == circle) {
+        _selectedCircle = null;
+      } else {
+        _selectedCircle = circle;
+      }
+    });
+    _updateSelectedCircle(
+      CircleOptions(
+        circleRadius: 6,
+        circleColor: "#ffffff",
+      ),
+    );
+  }
+
+  void _updateSelectedCircle(CircleOptions changes) {
+    mapController.updateCircle(_selectedCircle, changes);
   }
 
   void _add() {
     getCameraCoordinate();
-    totalDistance = calculate_list_lat_long(lines);
+    mapController.clearLines();
     setState(() {
       lines.add(_position.target);
+      totalDistance = calculate_list_lat_long(lines);
+    });
+    mapController.addLine(
+      LineOptions(
+        geometry: lines,
+        draggable: true,
+        lineColor: '#3366ff',
+        lineWidth: 5.0,
+        lineJoin: 'round',
+        lineOpacity: 0.40,
+      ),
+    );
 
-      mapController.addLine(
-        LineOptions(
-          geometry: lines,
-          draggable: false,
-          lineColor: '#000000',
-          lineWidth: 8.0,
-          lineJoin: 'round',
+    mapController.addCircle(
+      CircleOptions(
+        geometry: _position.target,
+        draggable: false,
+        circleColor: "#ff3300",
+        circleRadius: 4.5,
+        circleStrokeWidth: 1.5,
+        circleStrokeColor: "#000000",
+      ),
+    );
+    _circleCount += 1;
+  }
+
+  void _onLineTapped(Line line) {
+    if (_selectedLine != null) {
+      _updateSelectedLine(
+        const LineOptions(
+          lineWidth: 28.0,
         ),
       );
+    }
+    setState(() {
+      _selectedLine = line;
+    });
+    _updateSelectedLine(
+      LineOptions(
+        lineWidth: 50,
+      ),
+    );
+  }
+
+  void _updateSelectedLine(LineOptions changes) {
+    mapController.updateLine(_selectedLine, changes);
+  }
+
+  void _removeLines() {
+    mapController.removeLine(_selectedLine);
+    lines = [];
+    setState(() {
+      _selectedLine = null;
     });
   }
 
@@ -87,6 +172,8 @@ class _MapScreenState extends State<MapScreen> {
         children: <Widget>[
           MapboxMap(
             onMapCreated: _onMapCreated,
+            // onStyleLoadedCallback:
+            //     onStyleLoadedCallback, ////////////////////////////////////////
             initialCameraPosition: const CameraPosition(
               target: LatLng(49.329051, -123.141076), //userLocation
               zoom: 12,
@@ -130,7 +217,9 @@ class _MapScreenState extends State<MapScreen> {
             alignment: Alignment.bottomLeft,
             child: FloatingActionButton(
               heroTag: "btn2",
-              onPressed: _add, //getCameraCoordinate,
+              onPressed: (_selectedLine == null)
+                  ? null
+                  : _removeCircle, //getCameraCoordinate,
               child: Icon(Icons.my_location),
             ),
           ),
