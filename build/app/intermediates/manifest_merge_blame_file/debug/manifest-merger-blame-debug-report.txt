@@ -14,160 +14,161 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\debug\AndroidManifest.xml:6:5-66
 14-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\debug\AndroidManifest.xml:6:22-64
-15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->[:location] D:\Nima\Flutter\maps_distance_calculator\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
-15-->[:location] D:\Nima\Flutter\maps_distance_calculator\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
-16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->[:location] D:\Nima\Flutter\maps_distance_calculator\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
-16-->[:location] D:\Nima\Flutter\maps_distance_calculator\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-76
-17
-18    <uses-feature
-18-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:9:5-11:35
-19        android:glEsVersion="0x00020000"
-19-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:10:9-41
-20        android:required="true" />
-20-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:11:9-32
-21    <uses-feature
-21-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:12:5-14:36
-22        android:name="android.hardware.wifi"
-22-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:13:9-45
-23        android:required="false" />
-23-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:14:9-33
-24
-25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-25-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:17:5-79
-25-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:17:22-76
-26    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for CrashReporterJobIntentService on API levels below 25 -->
-26-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:18:5-76
-26-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:18:22-73
-27    <uses-permission android:name="android.permission.WAKE_LOCK" />
-27-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:5-68
-27-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:22-65
-28    <!--
-29 io.flutter.app.FlutterApplication is an android.app.Application that
-30         calls FlutterMain.startInitialization(this); in its onCreate method.
-31         In most cases you can leave this as-is, but you if you want to provide
-32         additional functionality it is fine to subclass or reimplement
-33         FlutterApplication and put your custom class here.
-34    -->
-35    <!--
-36 <uses-permission android:name="android.permission.INTERNET"/>
-37    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-38    -->
-39    <application
-39-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:12:5-51:19
-40        android:name="io.flutter.app.FlutterApplication"
-40-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:13:9-57
-41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-41-->[androidx.core:core:1.1.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
-42        android:debuggable="true"
-43        android:icon="@mipmap/ic_launcher"
-43-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:15:9-43
-44        android:label="maps_distance_calculator" >
-44-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:14:9-49
-45        <meta-data
-45-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:16:9-165
-46            android:name="com.mapbox.token"
-46-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:16:20-51
-47            android:value="pk.eyJ1IjoibmltbmltMTA1NDMiLCJhIjoiY2tjNGN2am94MDZuMTJxdDZ4NDNiZG1pcSJ9.TRa9YAhc7KUMsoGSNPNdlw" />
-47-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:16:52-162
-48
-49        <activity
-49-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:17:9-45:20
-50            android:name="com.example.maps_distance_calculator.MainActivity"
-50-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:18:13-41
-51            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-51-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:21:13-163
-52            android:hardwareAccelerated="true"
-52-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:22:13-47
-53            android:launchMode="singleTop"
-53-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:19:13-43
-54            android:theme="@style/LaunchTheme"
-54-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:20:13-47
-55            android:windowSoftInputMode="adjustResize" >
-55-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:23:13-55
-56
-57            <!--
-58                 Specifies an Android theme to apply to this Activity as soon as
-59                 the Android process has started. This theme is visible to the user
-60                 while the Flutter UI initializes. After that, this theme continues
-61                 to determine the Window background behind the Flutter UI.
-62            -->
-63            <meta-data
-63-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:28:13-31:17
-64                android:name="io.flutter.embedding.android.NormalTheme"
-64-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:29:15-70
-65                android:resource="@style/NormalTheme" />
-65-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:30:15-52
-66            <!--
-67                 Displays an Android View that continues showing the launch screen
-68                 Drawable until Flutter paints its first frame, then this splash
-69                 screen fades out. A splash screen is useful to avoid any visual
-70                 gap between the end of Android's launch screen and the painting of
-71                 Flutter's first frame.
-72            -->
-73            <meta-data
-73-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:37:13-40:17
-74                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-74-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:38:15-79
-75                android:resource="@drawable/launch_background" />
-75-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:39:15-61
-76
-77            <intent-filter>
-77-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:41:13-44:29
-78                <action android:name="android.intent.action.MAIN" />
-78-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:42:17-68
-78-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:42:25-66
-79
-80                <category android:name="android.intent.category.LAUNCHER" />
-80-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:43:17-76
-80-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:43:27-74
-81            </intent-filter>
-82        </activity>
-83        <!--
-84             Don't delete the meta-data below.
-85             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-86        -->
-87        <meta-data
-87-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:48:9-50:33
-88            android:name="flutterEmbedding"
-88-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:49:13-44
-89            android:value="2" />
-89-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:50:13-30
-90
-91        <activity
-91-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\caca95dbb47089f7a2169cf2b8821bd3\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
-92            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-92-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\caca95dbb47089f7a2169cf2b8821bd3\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
-93            android:exported="false"
-93-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\caca95dbb47089f7a2169cf2b8821bd3\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
-94            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-94-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\caca95dbb47089f7a2169cf2b8821bd3\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
-95
-96        <meta-data
-96-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\df4930cbc0c4d8fb2ac6dfd3419a9d33\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
-97            android:name="com.google.android.gms.version"
-97-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\df4930cbc0c4d8fb2ac6dfd3419a9d33\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
-98            android:value="@integer/google_play_services_version" />
-98-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\df4930cbc0c4d8fb2ac6dfd3419a9d33\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
-99
-100        <provider
-100-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:18:9-22:39
-101            android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
-101-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:19:13-93
-102            android:authorities="com.example.maps_distance_calculator.mapboxtelemetryinitprovider"
-102-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:20:13-79
-103            android:exported="false"
-103-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:21:13-37
-104            android:initOrder="100" />
-104-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:22:13-36
-105
-106        <service
-106-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:24:9-26:72
-107            android:name="com.mapbox.android.telemetry.errors.ErrorReporterJobIntentService"
-107-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:25:13-93
-108            android:permission="android.permission.BIND_JOB_SERVICE" />
-108-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:26:13-69
-109    </application>
-110
-111</manifest>
+15    <!--
+16     io.flutter.app.FlutterApplication is an android.app.Application that
+17         calls FlutterMain.startInitialization(this); in its onCreate method.
+18         In most cases you can leave this as-is, but you if you want to provide
+19         additional functionality it is fine to subclass or reimplement
+20         FlutterApplication and put your custom class here.
+21    -->
+22    <!--
+23 <uses-permission android:name="android.permission.INTERNET"/>
+24    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+25    -->
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:11:5-79
+26-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:11:22-76
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+27-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:12:5-81
+27-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:12:22-78
+28
+29    <uses-feature
+29-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:9:5-11:35
+30        android:glEsVersion="0x00020000"
+30-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:10:9-41
+31        android:required="true" />
+31-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:11:9-32
+32    <uses-feature
+32-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:12:5-14:36
+33        android:name="android.hardware.wifi"
+33-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:13:9-45
+34        android:required="false" />
+34-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:14:9-33
+35
+36    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+36-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:17:5-79
+36-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:17:22-76
+37    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for CrashReporterJobIntentService on API levels below 25 -->
+37-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:18:5-76
+37-->[com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\da10b3402938b61ca267106ec02f95fb\jetified-mapbox-android-sdk-9.2.0\AndroidManifest.xml:18:22-73
+38    <uses-permission android:name="android.permission.WAKE_LOCK" />
+38-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:5-68
+38-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:12:22-65
+39
+40    <application
+40-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:14:5-53:19
+41        android:name="io.flutter.app.FlutterApplication"
+41-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:15:9-57
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.2.0] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\b6252bb7f30c7dceb20e97dfa6dfae00\core-1.2.0\AndroidManifest.xml:24:18-86
+43        android:debuggable="true"
+44        android:icon="@mipmap/ic_launcher"
+44-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:17:9-43
+45        android:label="maps_distance_calculator" >
+45-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:16:9-49
+46        <meta-data
+46-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:18:9-165
+47            android:name="com.mapbox.token"
+47-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:18:20-51
+48            android:value="pk.eyJ1IjoibmltbmltMTA1NDMiLCJhIjoiY2tjNGN2am94MDZuMTJxdDZ4NDNiZG1pcSJ9.TRa9YAhc7KUMsoGSNPNdlw" />
+48-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:18:52-162
+49
+50        <activity
+50-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:19:9-47:20
+51            android:name="com.example.maps_distance_calculator.MainActivity"
+51-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:20:13-41
+52            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+52-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:23:13-163
+53            android:hardwareAccelerated="true"
+53-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:24:13-47
+54            android:launchMode="singleTop"
+54-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:21:13-43
+55            android:theme="@style/LaunchTheme"
+55-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:22:13-47
+56            android:windowSoftInputMode="adjustResize" >
+56-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:25:13-55
+57
+58            <!--
+59                 Specifies an Android theme to apply to this Activity as soon as
+60                 the Android process has started. This theme is visible to the user
+61                 while the Flutter UI initializes. After that, this theme continues
+62                 to determine the Window background behind the Flutter UI.
+63            -->
+64            <meta-data
+64-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:30:13-33:17
+65                android:name="io.flutter.embedding.android.NormalTheme"
+65-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:31:15-70
+66                android:resource="@style/NormalTheme" />
+66-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:32:15-52
+67            <!--
+68                 Displays an Android View that continues showing the launch screen
+69                 Drawable until Flutter paints its first frame, then this splash
+70                 screen fades out. A splash screen is useful to avoid any visual
+71                 gap between the end of Android's launch screen and the painting of
+72                 Flutter's first frame.
+73            -->
+74            <meta-data
+74-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:39:13-42:17
+75                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+75-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:40:15-79
+76                android:resource="@drawable/launch_background" />
+76-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:41:15-61
+77
+78            <intent-filter>
+78-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:43:13-46:29
+79                <action android:name="android.intent.action.MAIN" />
+79-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:44:17-68
+79-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:44:25-66
+80
+81                <category android:name="android.intent.category.LAUNCHER" />
+81-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:45:17-76
+81-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:45:27-74
+82            </intent-filter>
+83        </activity>
+84        <!--
+85             Don't delete the meta-data below.
+86             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+87        -->
+88        <meta-data
+88-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:50:9-52:33
+89            android:name="flutterEmbedding"
+89-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:51:13-44
+90            android:value="2" />
+90-->D:\Nima\Flutter\maps_distance_calculator\android\app\src\main\AndroidManifest.xml:52:13-30
+91
+92        <activity
+92-->[com.google.android.gms:play-services-base:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\f81e9fffe318fdc5660099e12e35729e\play-services-base-17.2.1\AndroidManifest.xml:23:9-26:75
+93            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+93-->[com.google.android.gms:play-services-base:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\f81e9fffe318fdc5660099e12e35729e\play-services-base-17.2.1\AndroidManifest.xml:24:13-79
+94            android:exported="false"
+94-->[com.google.android.gms:play-services-base:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\f81e9fffe318fdc5660099e12e35729e\play-services-base-17.2.1\AndroidManifest.xml:25:13-37
+95            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+95-->[com.google.android.gms:play-services-base:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\f81e9fffe318fdc5660099e12e35729e\play-services-base-17.2.1\AndroidManifest.xml:26:13-72
+96
+97        <meta-data
+97-->[com.google.android.gms:play-services-basement:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\ef9022287b8ed93fec6d33638d91b499\jetified-play-services-basement-17.2.1\AndroidManifest.xml:23:9-25:69
+98            android:name="com.google.android.gms.version"
+98-->[com.google.android.gms:play-services-basement:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\ef9022287b8ed93fec6d33638d91b499\jetified-play-services-basement-17.2.1\AndroidManifest.xml:24:13-58
+99            android:value="@integer/google_play_services_version" />
+99-->[com.google.android.gms:play-services-basement:17.2.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\ef9022287b8ed93fec6d33638d91b499\jetified-play-services-basement-17.2.1\AndroidManifest.xml:25:13-66
+100
+101        <provider
+101-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:18:9-22:39
+102            android:name="com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider"
+102-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:19:13-93
+103            android:authorities="com.example.maps_distance_calculator.mapboxtelemetryinitprovider"
+103-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:20:13-79
+104            android:exported="false"
+104-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:21:13-37
+105            android:initOrder="100" />
+105-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:22:13-36
+106
+107        <service
+107-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:24:9-26:72
+108            android:name="com.mapbox.android.telemetry.errors.ErrorReporterJobIntentService"
+108-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:25:13-93
+109            android:permission="android.permission.BIND_JOB_SERVICE" />
+109-->[com.mapbox.mapboxsdk:mapbox-android-telemetry:5.0.1] C:\Users\nima\.gradle\caches\transforms-2\files-2.1\d721b256e2120f1633b63097630b6909\jetified-mapbox-android-telemetry-5.0.1\AndroidManifest.xml:26:13-69
+110    </application>
+111
+112</manifest>

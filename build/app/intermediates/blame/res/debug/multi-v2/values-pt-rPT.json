@@ -4,7 +4,24 @@
             "outputFile": "D:\\Nima\\Flutter\\maps_distance_calculator\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rPT\\values-pt-rPT.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\caca95dbb47089f7a2169cf2b8821bd3\\jetified-play-services-base-16.0.1\\res\\values-pt-rPT\\values.xml",
+                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\b6252bb7f30c7dceb20e97dfa6dfae00\\core-1.2.0\\res\\values-pt-rPT\\values-pt-rPT.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "61",
+                        "startColumns": "4",
+                        "startOffsets": "7287",
+                        "endColumns": "100",
+                        "endOffsets": "7383"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\f81e9fffe318fdc5660099e12e35729e\\play-services-base-17.2.1\\res\\values-pt-rPT\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -18,6 +35,23 @@
                         "startOffsets": "2864,2971,3166,3296,3406,3633,3763,3915,4257,4504,4614,4815,4948,5166,5374,5472,5571",
                         "endColumns": "106,194,129,109,226,129,151,137,246,109,200,132,217,207,97,98,115",
                         "endOffsets": "2966,3161,3291,3401,3628,3758,3910,4048,4499,4609,4810,4943,5161,5369,5467,5566,5682"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\ef9022287b8ed93fec6d33638d91b499\\jetified-play-services-basement-17.2.1\\res\\values-pt-rPT\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "203",
+                        "endOffsets": "454"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4053",
+                        "endColumns": "203",
+                        "endOffsets": "4252"
                     }
                 },
                 {
@@ -35,40 +69,6 @@
                         "startOffsets": "5687,5847,6030,6107,6187,6260,6352,6441,6576,6692,6860,6989,7124",
                         "endColumns": "159,182,76,79,72,91,88,134,115,167,128,134,77",
                         "endOffsets": "5842,6025,6102,6182,6255,6347,6436,6571,6687,6855,6984,7119,7197"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\df4930cbc0c4d8fb2ac6dfd3419a9d33\\jetified-play-services-basement-16.0.1\\res\\values-pt-rPT\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "203",
-                        "endOffsets": "454"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4053",
-                        "endColumns": "203",
-                        "endOffsets": "4252"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-pt-rPT\\values-pt-rPT.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "61",
-                        "startColumns": "4",
-                        "startOffsets": "7287",
-                        "endColumns": "100",
-                        "endOffsets": "7383"
                     }
                 },
                 {

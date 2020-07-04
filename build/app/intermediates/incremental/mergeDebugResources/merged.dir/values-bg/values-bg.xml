@@ -57,5 +57,5 @@
     <string name="mapbox_myLocationViewContentDescription">Изглед локация. Това показва местоположението ти на картата.</string>
     <string name="mapbox_offline_error_region_definition_invalid">Предоставените OfflineRegionDefinition не пасват в границите на света: %s</string>
     <string msgid="146198913615257606" name="search_menu_title">"Търсене"</string>
-    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

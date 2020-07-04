@@ -60,5 +60,5 @@
     <string name="mapbox_telemetryImproveMap">Ulepsz tą mapę</string>
     <string name="mapbox_telemetrySettings">Ustawienia telemetrii</string>
     <string msgid="146198913615257606" name="search_menu_title">"Szukaj"</string>
-    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

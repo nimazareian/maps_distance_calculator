@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'api_key.dart';
-import 'package:mapbox_gl/mapbox_gl.dart';
-// import 'package:latlong/';
+import 'screens/loading_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,30 +20,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const FullMap();
-  }
-}
-
-class FullMap extends StatefulWidget {
-  const FullMap();
-
-  @override
-  State createState() => FullMapState();
-}
-
-class FullMapState extends State<FullMap> {
-  MapboxMapController mapController;
-
-  void _onMapCreated(MapboxMapController controller) {
-    mapController = controller;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-        body: MapboxMap(
-      onMapCreated: _onMapCreated,
-      initialCameraPosition: const CameraPosition(target: LatLng(0.0, 0.0)),
-    ));
+    return MaterialApp(
+      home: LoadingScreen(),
+    );
   }
 }

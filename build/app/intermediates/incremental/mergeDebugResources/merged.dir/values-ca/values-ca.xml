@@ -57,5 +57,5 @@
     <string name="mapbox_myLocationViewContentDescription">Vista de posició. Mostra la teva posició al mapa.</string>
     <string name="mapbox_offline_error_region_definition_invalid">La OfflineRegionDefinition proporcionada no encaixa amb els límits del món: %s</string>
     <string msgid="146198913615257606" name="search_menu_title">"Cerca"</string>
-    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

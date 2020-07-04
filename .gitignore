@@ -1,1 +1,7 @@
 api_key.dart
+.dart_tool/
+.packages
+build/
+pubspec.lock  # Except for application packages
+doc/api/
+.idea/

@@ -37,7 +37,7 @@
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"‏שגיאה בשירותי Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"‏<ns1:g id="APP_NAME">%1$s</ns1:g> נתקלה בבעיה בשירותי Google Play. נסה שוב."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"‏<ns1:g id="APP_NAME">%1$s</ns1:g> לא תפעל ללא שירותי Google Play, שאינם נתמכים במכשיר שלך."</string>
-    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"עדכן"</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"עדכון"</string>
     <string msgid="7773943415006962566" name="common_google_play_services_update_text">"‏<ns1:g id="APP_NAME">%1$s</ns1:g> לא יפעל אם לא תעדכן את שירותי Google Play."</string>
     <string msgid="8706675115216073244" name="common_google_play_services_update_title">"‏עדכון שירותי Google Play"</string>
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"‏האפליקציה <ns1:g id="APP_NAME">%1$s</ns1:g> לא תפעל ללא שירותי Google Play, שמתעדכנים כרגע."</string>
@@ -59,5 +59,5 @@
     <string name="mapbox_offline_error_region_definition_invalid">בתנאי ש- OfflineRegionDefinition אינו מתאים לגבולות העולם: %s</string>
     <string name="mapbox_telemetrySettings">הגדרות טלמטריות</string>
     <string msgid="146198913615257606" name="search_menu_title">"חיפוש"</string>
-    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

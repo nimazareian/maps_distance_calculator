@@ -60,5 +60,5 @@
     <string name="mapbox_telemetryImproveMap">Cải thiện Bản đồ này</string>
     <string name="mapbox_telemetrySettings">Thiết lập Trình viễn trắc</string>
     <string msgid="146198913615257606" name="search_menu_title">"Tìm kiếm"</string>
-    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

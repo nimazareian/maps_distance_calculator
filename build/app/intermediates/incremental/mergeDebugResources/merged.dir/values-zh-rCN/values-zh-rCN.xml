@@ -60,5 +60,5 @@
     <string name="mapbox_telemetryImproveMap">完善地图</string>
     <string name="mapbox_telemetrySettings">Telemetry设置</string>
     <string msgid="146198913615257606" name="search_menu_title">"搜索"</string>
-    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

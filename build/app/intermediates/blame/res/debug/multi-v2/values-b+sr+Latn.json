@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\ef9022287b8ed93fec6d33638d91b499\\jetified-play-services-basement-17.2.1\\res\\values-b+sr+Latn\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "254",
+                        "endColumns": "188",
+                        "endOffsets": "442"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3979",
+                        "endColumns": "188",
+                        "endOffsets": "4163"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\b6252bb7f30c7dceb20e97dfa6dfae00\\core-1.2.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\caca95dbb47089f7a2169cf2b8821bd3\\jetified-play-services-base-16.0.1\\res\\values-b+sr+Latn\\values.xml",
+                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\f81e9fffe318fdc5660099e12e35729e\\play-services-base-17.2.1\\res\\values-b+sr+Latn\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,23 +69,6 @@
                         "startOffsets": "2828,2936,3124,3252,3364,3577,3706,3848,4168,4376,4485,4676,4805,5013,5185,5283,5378",
                         "endColumns": "107,187,127,111,212,128,141,130,207,108,190,128,207,171,97,94,108",
                         "endOffsets": "2931,3119,3247,3359,3572,3701,3843,3974,4371,4480,4671,4800,5008,5180,5278,5373,5482"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\nima\\.gradle\\caches\\transforms-2\\files-2.1\\df4930cbc0c4d8fb2ac6dfd3419a9d33\\jetified-play-services-basement-16.0.1\\res\\values-b+sr+Latn\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "254",
-                        "endColumns": "188",
-                        "endOffsets": "442"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3979",
-                        "endColumns": "188",
-                        "endOffsets": "4163"
                     }
                 }
             ]
