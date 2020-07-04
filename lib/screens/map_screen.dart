@@ -66,10 +66,22 @@ class _MapScreenState extends State<MapScreen> {
 
   void _removeCircle() {
     mapController.removeCircle(_selectedCircle);
+    removePointLine(_selectedCircle.options.geometry);
     setState(() {
       _selectedCircle = null;
       _circleCount -= 1;
+      totalDistance = calculate_list_lat_long(lines);
     });
+  }
+
+  void removePointLine(LatLng circleCoord) {
+    for (LatLng lineCoord in lines) {
+      if (circleCoord == lineCoord) {
+        lines.remove(circleCoord);
+        drawLines();
+        return;
+      }
+    }
   }
 
   void _onCircleTapped(Circle circle) {
@@ -90,7 +102,7 @@ class _MapScreenState extends State<MapScreen> {
     });
     _updateSelectedCircle(
       CircleOptions(
-        circleRadius: 6,
+        circleRadius: 8,
         circleColor: "#ffffff",
       ),
     );
@@ -102,11 +114,17 @@ class _MapScreenState extends State<MapScreen> {
 
   void _add() {
     getCameraCoordinate();
-    mapController.clearLines();
+    // mapController.clearLines();
     setState(() {
       lines.add(_position.target);
       totalDistance = calculate_list_lat_long(lines);
     });
+    drawLines();
+    drawCircles();
+  }
+
+  void drawLines() {
+    mapController.clearLines();
     mapController.addLine(
       LineOptions(
         geometry: lines,
@@ -117,13 +135,15 @@ class _MapScreenState extends State<MapScreen> {
         lineOpacity: 0.40,
       ),
     );
+  }
 
+  void drawCircles() {
     mapController.addCircle(
       CircleOptions(
         geometry: _position.target,
         draggable: false,
         circleColor: "#ff3300",
-        circleRadius: 4.5,
+        circleRadius: 6, //4.5
         circleStrokeWidth: 1.5,
         circleStrokeColor: "#000000",
       ),
@@ -149,6 +169,7 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
+// /* SELECT AND REMOVE LINE
   void _updateSelectedLine(LineOptions changes) {
     mapController.updateLine(_selectedLine, changes);
   }
@@ -161,6 +182,7 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
+// */
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -217,7 +239,7 @@ class _MapScreenState extends State<MapScreen> {
             alignment: Alignment.bottomLeft,
             child: FloatingActionButton(
               heroTag: "btn2",
-              onPressed: (_selectedLine == null)
+              onPressed: (_selectedCircle == null)
                   ? null
                   : _removeCircle, //getCameraCoordinate,
               child: Icon(Icons.my_location),
