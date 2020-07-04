@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:maps_distance_calculator/services/location.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:maps_distance_calculator/services/lat_long_calculations.dart';
 
 const _styling = 'mapbox://styles/nimnim10543/ckc6xzcdo1qbo1inse564aqu3';
 
@@ -18,6 +20,7 @@ class _MapScreenState extends State<MapScreen> {
   CameraPosition _position = _kInitialPosition;
   LatLng userLocation;
   List<LatLng> lines = List<LatLng>();
+  double totalDistance = 0;
 
   @override
   void initState() {
@@ -46,15 +49,7 @@ class _MapScreenState extends State<MapScreen> {
 
   void _onMapCreated(MapboxMapController controller) {
     mapController = controller;
-    // mapController.addListener(_onMapChanged);
-    // _onMapChanged();
   }
-
-  // void _onMapChanged() {
-  //   setState(() {
-  //     _position = mapController.cameraPosition;
-  //   });
-  // }
 
   void getCameraCoordinate() {
     setState(() {
@@ -65,30 +60,16 @@ class _MapScreenState extends State<MapScreen> {
 
   void _add() {
     getCameraCoordinate();
-
-    // print('position: ${_position.target}');
-
-    // if (_position.target != null) {
-    //   print('AMMMMM NO NULL!!!!!!');
-    //   lines.add(_position.target);
-    // } else {
-    //   print('wooooAAAAH NULLL');
-    // }
-
-    // print('lines: ${lines.toString()}');
+    totalDistance = calculate_list_lat_long(lines);
     setState(() {
+      lines.add(_position.target);
+
       mapController.addLine(
         LineOptions(
           geometry: lines,
-          // [
-          //   LatLng(49.329051, -123.141076),
-          //   LatLng(49.329051, -124.141076),
-          //   LatLng(50.329051, -123.141076),
-          //   LatLng(49.329051, -123.141076),
-          // ],
           draggable: false,
           lineColor: '#000000',
-          lineWidth: 10.0,
+          lineWidth: 8.0,
           lineJoin: 'round',
         ),
       );
@@ -100,10 +81,6 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Distance Calculator'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _add, //getCameraCoordinate,
-        child: Icon(Icons.add),
       ),
       body: Stack(
         alignment: Alignment.center,
@@ -118,17 +95,45 @@ class _MapScreenState extends State<MapScreen> {
             trackCameraPosition:
                 true, //OOOOOOOOOOMMMMMMGGGGGGGGGGGGGGGGGGGGGGGGGGGG
           ),
-          Icon(
-            Icons.location_on,
-            size: 50,
-            color: Colors.redAccent,
+          Padding(
+            padding: const EdgeInsets.only(
+              bottom: 40,
+            ),
+            child: Icon(
+              Icons.location_on,
+              size: 50,
+              color: Colors.redAccent,
+            ),
           ),
           Container(
             alignment: Alignment.bottomCenter,
             child: Text(
-                'camera target: ${_position.target.latitude.toStringAsFixed(4)},'
-                '${_position.target.longitude.toStringAsFixed(4)}'),
-          )
+              // 'camera target: ${_position.target.latitude.toStringAsFixed(4)},'
+              // '${_position.target.longitude.toStringAsFixed(4)}'
+              totalDistance.toStringAsFixed(3) + ' miles?',
+              style: TextStyle(
+                fontSize: 45,
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.bottomRight,
+            padding: EdgeInsets.all(32.0),
+            child: FloatingActionButton(
+              heroTag: "btn1",
+              onPressed: _add, //getCameraCoordinate,
+              child: Icon(Icons.add),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(32.0),
+            alignment: Alignment.bottomLeft,
+            child: FloatingActionButton(
+              heroTag: "btn2",
+              onPressed: _add, //getCameraCoordinate,
+              child: Icon(Icons.my_location),
+            ),
+          ),
         ],
       ),
     );
