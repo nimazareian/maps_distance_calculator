@@ -155,7 +155,7 @@ class _MapScreenState extends State<MapScreen> {
     if (_selectedLine != null) {
       _updateSelectedLine(
         const LineOptions(
-          lineWidth: 28.0,
+          lineWidth: 10.0,
         ),
       );
     }
@@ -164,7 +164,7 @@ class _MapScreenState extends State<MapScreen> {
     });
     _updateSelectedLine(
       LineOptions(
-        lineWidth: 50,
+        lineWidth: 10,
       ),
     );
   }
@@ -189,63 +189,116 @@ class _MapScreenState extends State<MapScreen> {
       appBar: AppBar(
         title: Text('Distance Calculator'),
       ),
-      body: Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          MapboxMap(
-            onMapCreated: _onMapCreated,
-            // onStyleLoadedCallback:
-            //     onStyleLoadedCallback, ////////////////////////////////////////
-            initialCameraPosition: const CameraPosition(
-              target: LatLng(49.329051, -123.141076), //userLocation
-              zoom: 12,
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            MapboxMap(
+              onMapCreated: _onMapCreated,
+              // onStyleLoadedCallback:
+              //     onStyleLoadedCallback, ////////////////////////////////////////
+              initialCameraPosition: const CameraPosition(
+                target: LatLng(49.329051, -123.141076), //userLocation
+                zoom: 12,
+              ),
+              styleString: _styling,
+              trackCameraPosition:
+                  true, //OOOOOOOOOOMMMMMMGGGGGGGGGGGGGGGGGGGGGGGGGGGG
             ),
-            styleString: _styling,
-            trackCameraPosition:
-                true, //OOOOOOOOOOMMMMMMGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              bottom: 40,
-            ),
-            child: Icon(
-              Icons.location_on,
-              size: 50,
-              color: Colors.redAccent,
-            ),
-          ),
-          Container(
-            alignment: Alignment.bottomCenter,
-            child: Text(
-              // 'camera target: ${_position.target.latitude.toStringAsFixed(4)},'
-              // '${_position.target.longitude.toStringAsFixed(4)}'
-              totalDistance.toStringAsFixed(3) + ' miles?',
-              style: TextStyle(
-                fontSize: 45,
+            Padding(
+              padding: const EdgeInsets.only(
+                bottom: 40,
+              ),
+              child: Icon(
+                Icons.location_on,
+                size: 50,
+                color: Colors.redAccent,
               ),
             ),
-          ),
-          Container(
-            alignment: Alignment.bottomRight,
-            padding: EdgeInsets.all(32.0),
-            child: FloatingActionButton(
-              heroTag: "btn1",
-              onPressed: _add, //getCameraCoordinate,
-              child: Icon(Icons.add),
+            Row(
+              children: <Widget>[
+                Container(
+                  // padding: EdgeInsets.only(
+                  //   left: 32,
+                  //   bottom: 32,
+                  // ),
+                  padding: EdgeInsets.all(32),
+                  alignment: Alignment.bottomLeft,
+                  child: FloatingActionButton(
+                    heroTag: "btn2",
+                    onPressed: (_selectedCircle == null)
+                        ? null
+                        : _removeCircle, //getCameraCoordinate,
+                    child: Icon(Icons.location_off),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      height: 60,
+                      // color: Color(0xAAc9c9c9),
+                      alignment: Alignment.bottomCenter,
+                      margin: EdgeInsets.only(
+                        bottom: 32,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Color(0xAAf0f0f0),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.3),
+                            spreadRadius: 3,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Text(
+                          // 'camera target: ${_position.target.latitude.toStringAsFixed(4)},'
+                          // '${_position.target.longitude.toStringAsFixed(4)}'
+                          totalDistance.toStringAsFixed(2) + ' km',
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.bottomRight,
+                  // padding: EdgeInsets.only(
+                  //   bottom: 32,
+                  //   right: 32,
+                  // ),
+                  padding: EdgeInsets.all(32),
+                  child: FloatingActionButton(
+                    heroTag: "btn1",
+                    onPressed: _add, //getCameraCoordinate,
+                    child: Icon(Icons.add),
+                  ),
+                ),
+              ],
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(32.0),
-            alignment: Alignment.bottomLeft,
-            child: FloatingActionButton(
-              heroTag: "btn2",
-              onPressed: (_selectedCircle == null)
-                  ? null
-                  : _removeCircle, //getCameraCoordinate,
-              child: Icon(Icons.my_location),
+            Container(
+              alignment: Alignment.topRight,
+              // padding: EdgeInsets.only(
+              //   bottom: 32,
+              //   right: 32,
+              // ),
+              padding: EdgeInsets.all(32),
+              child: FloatingActionButton(
+                heroTag: "btn3",
+                onPressed: _add, //getCameraCoordinate,
+                child: Icon(Icons.my_location),
+                backgroundColor: Colors.greenAccent,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
