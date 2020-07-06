@@ -18,6 +18,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void getLocationData() async {
     Location location = Location();
     var userLocation = await location.getCurrentLocation();
+    print('THIS IS THE USER LOCATION!!!!!!!!!! ${userLocation.toString()}');
 
     Navigator.push(
       context,
@@ -34,10 +35,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF81c784),
+      backgroundColor: Colors.grey.shade100, //Color(0xFF81c784)
       body: Center(
         child: SpinKitCircle(
-          color: Colors.white,
+          color: Color(0xFF81c784),
           size: 100,
         ),
       ),

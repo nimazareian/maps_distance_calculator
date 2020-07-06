@@ -1,8 +1,12 @@
+// import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
-import 'package:maps_distance_calculator/services/location.dart';
-import 'package:geolocator/geolocator.dart';
+// import 'package:maps_distance_calculator/services/location.dart';
+// import 'package:geolocator/geolocator.dart';
 import 'package:maps_distance_calculator/services/lat_long_calculations.dart';
+import 'package:maps_distance_calculator/components/custom_fab.dart';
+import 'package:maps_distance_calculator/components/total_distance_calculator.dart';
 
 const _styling = 'mapbox://styles/nimnim10543/ckc6xzcdo1qbo1inse564aqu3';
 
@@ -22,20 +26,22 @@ class _MapScreenState extends State<MapScreen> {
   LatLng userLocation;
   List<LatLng> lines = List<LatLng>();
   double totalDistance = 0;
-  int _circleCount = 0;
   Circle _selectedCircle;
+
+  static final CameraPosition _kInitialPosition = const CameraPosition(
+    target: LatLng(-33.852, 20.211),
+    zoom: 11.0,
+  );
 
   @override
   void initState() {
     super.initState();
     updateUI(widget.userLocation);
-    // print('test test ${userLocation.toString()}'); //todo test
   }
 
   @override
   void dispose() {
-    // mapController.removeListener(_onMapChanged);
-    mapController?.onLineTapped?.remove(_onLineTapped); ////////////////
+    mapController?.onLineTapped?.remove(_onLineTapped);
     super.dispose();
   }
 
@@ -43,18 +49,11 @@ class _MapScreenState extends State<MapScreen> {
     if (startLocation != null) {
       userLocation = startLocation;
     }
-    // print('user location is: $userLocation');
   }
-
-  static final CameraPosition _kInitialPosition = const CameraPosition(
-    target: LatLng(-33.852, 20.211), //what is this target?
-    zoom: 11.0,
-  );
 
   void _onMapCreated(MapboxMapController controller) {
     mapController = controller;
-    controller.onLineTapped
-        .add(_onLineTapped); ////////////////////////////////////
+    controller.onLineTapped.add(_onLineTapped);
     mapController.onCircleTapped.add(_onCircleTapped);
   }
 
@@ -69,7 +68,6 @@ class _MapScreenState extends State<MapScreen> {
     removePointLine(_selectedCircle.options.geometry);
     setState(() {
       _selectedCircle = null;
-      _circleCount -= 1;
       totalDistance = calculate_list_lat_long(lines);
     });
   }
@@ -148,7 +146,6 @@ class _MapScreenState extends State<MapScreen> {
         circleStrokeColor: "#000000",
       ),
     );
-    _circleCount += 1;
   }
 
   void _onLineTapped(Line line) {
@@ -169,7 +166,6 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-// /* SELECT AND REMOVE LINE
   void _updateSelectedLine(LineOptions changes) {
     mapController.updateLine(_selectedLine, changes);
   }
@@ -182,122 +178,71 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-// */
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Distance Calculator'),
-      ),
-      body: SafeArea(
-        child: Stack(
-          alignment: Alignment.center,
-          children: <Widget>[
-            MapboxMap(
-              onMapCreated: _onMapCreated,
-              // onStyleLoadedCallback:
-              //     onStyleLoadedCallback, ////////////////////////////////////////
-              initialCameraPosition: const CameraPosition(
-                target: LatLng(49.329051, -123.141076), //userLocation
-                zoom: 12,
-              ),
-              styleString: _styling,
-              trackCameraPosition:
-                  true, //OOOOOOOOOOMMMMMMGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                bottom: 40,
-              ),
-              child: Icon(
-                Icons.location_on,
-                size: 50,
-                color: Colors.redAccent,
-              ),
-            ),
-            Row(
-              children: <Widget>[
-                Container(
-                  // padding: EdgeInsets.only(
-                  //   left: 32,
-                  //   bottom: 32,
-                  // ),
-                  padding: EdgeInsets.all(32),
-                  alignment: Alignment.bottomLeft,
-                  child: FloatingActionButton(
-                    heroTag: "btn2",
-                    onPressed: (_selectedCircle == null)
-                        ? null
-                        : _removeCircle, //getCameraCoordinate,
-                    child: Icon(Icons.location_off),
-                  ),
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Distance Calculator'),
+        ),
+        body: SafeArea(
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              MapboxMap(
+                onMapCreated: _onMapCreated,
+                initialCameraPosition: const CameraPosition(
+                  target: LatLng(49.329051, -123.141076), //userLocation
+                  zoom: 13,
                 ),
-                Expanded(
-                  child: Container(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      height: 60,
-                      // color: Color(0xAAc9c9c9),
-                      alignment: Alignment.bottomCenter,
-                      margin: EdgeInsets.only(
-                        bottom: 32,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Color(0xAAf0f0f0),
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.3),
-                            spreadRadius: 3,
-                            blurRadius: 5,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child: Center(
-                        child: Text(
-                          // 'camera target: ${_position.target.latitude.toStringAsFixed(4)},'
-                          // '${_position.target.longitude.toStringAsFixed(4)}'
-                          totalDistance.toStringAsFixed(2) + ' km',
-                          style: TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                styleString: MapboxStyles.MAPBOX_STREETS, //_styling,
+                trackCameraPosition: true,
+                myLocationEnabled: true,
+                myLocationTrackingMode: MyLocationTrackingMode.Tracking,
+                myLocationRenderMode: MyLocationRenderMode.COMPASS,
+                // onMapLongClick: (point, latLng) async {
+                //   print(
+                //       "Map click: ${point.x},${point.y}   ${latLng.latitude}/${latLng.longitude}");
+                // },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 40,
                 ),
-                Container(
-                  alignment: Alignment.bottomRight,
-                  // padding: EdgeInsets.only(
-                  //   bottom: 32,
-                  //   right: 32,
-                  // ),
-                  padding: EdgeInsets.all(32),
-                  child: FloatingActionButton(
-                    heroTag: "btn1",
-                    onPressed: _add, //getCameraCoordinate,
-                    child: Icon(Icons.add),
-                  ),
+                child: Icon(
+                  Icons.location_on,
+                  size: 50,
+                  color: Colors.redAccent,
                 ),
-              ],
-            ),
-            Container(
-              alignment: Alignment.topRight,
-              // padding: EdgeInsets.only(
-              //   bottom: 32,
-              //   right: 32,
-              // ),
-              padding: EdgeInsets.all(32),
-              child: FloatingActionButton(
+              ),
+              CustomFAB(
+                alignment: Alignment.topLeft,
+                onTap: () {},
+                icon: Icon(Icons.gps_fixed),
                 heroTag: "btn3",
-                onPressed: _add, //getCameraCoordinate,
-                child: Icon(Icons.my_location),
-                backgroundColor: Colors.greenAccent,
               ),
-            ),
-          ],
+              Row(
+                children: <Widget>[
+                  CustomFAB(
+                    alignment: Alignment.bottomLeft,
+                    onTap: (_selectedCircle == null) ? null : _removeCircle,
+                    icon: Icon(Icons.location_off),
+                    heroTag: "btn2",
+                  ),
+                  TotalDistanceContainer(
+                    text: totalDistance.toStringAsFixed(2) + ' km',
+                  ),
+                  CustomFAB(
+                    alignment: Alignment.bottomRight,
+                    onTap: _add,
+                    icon: Icon(Icons.edit_location),
+                    heroTag: "btn1",
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
